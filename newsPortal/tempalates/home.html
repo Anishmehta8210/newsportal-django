@@ -28,7 +28,7 @@
       <div class="md:flex-grow">
         <h2 class="text-2xl font-medium text-gray-900 title-font mb-2"style="margin-left: 80px;">{{post.title}}</h2>
         <p class="leading-relaxed"style="margin-left: 80px;">{{post.content|truncatechars:300}}</p>
-        <a class="text-indigo-500 inline-flex items-center mt-4" style="margin-left: 80px;">Learn More
+        <a class="text-indigo-500 inline-flex items-center mt-4" style="margin-left: 80px;" href="{% url 'singlePost' post.id%}">Learn More
           <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>

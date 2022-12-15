@@ -42,3 +42,12 @@ def search(r):
         "posts":Post.objects.filter(title__contains=search)
         }
     return render(r, "home.html",data)
+  
+
+def singlePost(r,post_id):
+    data = {}
+    data['category'] = Category.objects.all()
+    data['post'] = Post.objects.get(pk=post_id)
+    data['posts'] = Post.objects.exclude(pk=post_id)
+    return render(r,"view.html",data)
+
