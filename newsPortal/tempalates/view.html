@@ -19,13 +19,13 @@
         <div class="-my-8 divide-y-2 divide-gray-100">
             <div class="py-8 flex flex-wrap md:flex-nowrap">
                 <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <img src="{{ post.image.url }}" />
+                    <img src="{{ post.image.url }}" style="border-radius: 50%;"/>
                     <span class="font-semibold title-font text-gray-700">{{ post.category }}</span>
                     <span class="mt-1 text-gray-500 text-sm">{{ post.date }}</span>
                 </div>
                 <div class="md:flex-grow">
-                    <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{ post.title }}</h2>
-                    <p class="leading-relaxed">{{ post.content }}</p>
+                    <h2 class="text-2xl font-medium text-gray-900 title-font mb-2" style="margin-left: 80px;">{{ post.title }}</h2>
+                    <p class="leading-relaxed" style="margin-left: 80px;">{{ post.content }}</p>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
     <div class="flex px-8 py-4 gap-4">
         {% for relatedPost in posts %}
         <div class="w-1/4 flex flex-col border shadow-xl border-slate-300 p-2 text-center rounded">
-                <img src="{{ relatedPost.image.url }}" />
+                <img src="{{ relatedPost.image.url }}" style="border-radius: 50% ;height:40%;"/>
                 <span class="font-semibold title-font text-gray-700">{{ relatedPost.category }}</span>
                 <span class="mt-1 text-gray-500 text-sm">{{ relatedPost.date }}</span>
             <div class="md:flex-grow">
